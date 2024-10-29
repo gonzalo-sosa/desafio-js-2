@@ -7,6 +7,7 @@ Single Responsibility Principle(SRP):
 */
 
 import { Blog } from "./Blog.js";
+import { ArticleElement } from "./ArticleElement.js";
 
 const blog = new Blog();
 
@@ -15,4 +16,7 @@ blog.agregarEntrada({
   cuerpo: "Este es mi primer post del blog",
 });
 
-console.log(blog.entradas);
+for (let entrada of blog.entradas) {
+  const article = ArticleElement.render({ ...entrada });
+  console.log(article);
+}
