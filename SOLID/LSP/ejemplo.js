@@ -9,8 +9,12 @@ TODO: Asegúrate de que las subclases puedan ser usadas de manera intercambiable
 import { TextInput } from "./TextInput.js";
 import { NumberInput } from "./NumberInput.js";
 
-const inputs = [new TextInput("hola"), new NumberInput(2)];
+export const ejemploLSP = () => {
+  console.log("Ejemplo de LSP:");
 
-for (const input of inputs) {
-  console.log(input, input.validar());
-}
+  const inputs = [new TextInput("hola"), new NumberInput(2)];
+
+  for (const input of inputs) {
+    console.log(input, input.validar());
+  }
+};

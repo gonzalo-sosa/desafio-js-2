@@ -9,14 +9,18 @@ Single Responsibility Principle(SRP):
 import { Blog } from "./Blog.js";
 import { ArticleElement } from "./ArticleElement.js";
 
-const blog = new Blog();
+export const ejemploSRP = () => {
+  console.log("\n********** Ejemplo de SRP **********\n");
 
-blog.agregarEntrada({
-  titulo: "Primera entrada",
-  cuerpo: "Este es mi primer post del blog",
-});
+  const blog = new Blog();
 
-for (let entrada of blog.entradas) {
-  const article = ArticleElement.render({ ...entrada });
-  console.log(article);
-}
+  blog.agregarEntrada({
+    titulo: "Primera entrada",
+    cuerpo: "Este es mi primer post del blog",
+  });
+
+  for (let entrada of blog.entradas) {
+    const article = ArticleElement.render({ ...entrada });
+    console.log(article);
+  }
+};
