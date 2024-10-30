@@ -5,9 +5,9 @@ export class Credito {
   }
   realizarPago(Usuario, precio) {
     console.log(
-      `${Usuario.nombre} pagó con crédito $${precio} a ${this.cuotas} de $${
-        (precio / this.cuotas) * (1 + this.interes)
-      } cada una.`
+      `${Usuario.nombre} pagó con crédito $${precio} a ${
+        this.cuotas
+      } cuotas de $${(precio / this.cuotas) * (1 + this.interes)} cada una.`
     );
   }
 }

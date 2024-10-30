@@ -27,4 +27,6 @@ export const ejemploDIP = () => {
 
   tienda = new Tienda(procesadorDePagosDebito);
   tienda.comprarArticulo(1000, 4);
+
+  console.log("\n");
 };
